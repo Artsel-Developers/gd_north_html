@@ -1,0 +1,22 @@
+//settings and libs
+@use "sass:math";
+
+@import "inc/fonts";
+
+@import "inc/reset";
+
+@import "inc/mixins";
+@import "inc/global";
+@import "inc/libs";
+@import "inc/components";
+
+//parts
+@import "parts/header";
+
+@import "parts/footer";
+
+//pages
+@import "pages/home";
+
+
+// questionnaire

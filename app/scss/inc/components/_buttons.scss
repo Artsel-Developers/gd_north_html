@@ -1,0 +1,28 @@
+// <buttons>===============================================================================================
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	font-family: $font_primary;
+	text-align: center;
+	font-size: clamp(rem(16), vw(18), rem(18));
+	font-weight: 500;
+	line-height: math.div(23, 18);
+	// color: $white;
+
+	border-radius: rem(100);
+
+	transition: all 0.3s ease 0s;
+
+	i {
+		transition: transform 0.3s ease 0s;
+	}
+
+	&[disabled] {
+		cursor: not-allowed;
+	}
+}
+
+
+// </buttons>===============================================================================================

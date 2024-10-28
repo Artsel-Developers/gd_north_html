@@ -1,0 +1,78 @@
+//<Input >====================================================================================================
+.input {
+	border-radius: 0 !important;
+	width: 100%;
+	display: block;
+	padding: 0px 20px;
+	&:focus {
+		border-color: #ffffff;
+	}
+}
+input[type="range"] {
+	width: 100%;
+	background-color: #ffffff;
+
+	&::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		appearance: none;
+		height: rem(24);
+		width: rem(24);
+		background-color: #ffffff;
+		border-radius: 50%;
+		border: rem(4) solid #ffffff;
+		transition: 0.2s ease-in-out;
+	}
+	&::-moz-range-thumb {
+		-webkit-appearance: none;
+		appearance: none;
+		height: rem(20);
+		width: rem(20);
+		background-color: #ffffff;
+		border-radius: 50%;
+		border: rem(4) solid #ffffff;
+		transition: 0.2s ease-in-out;
+	}
+	&::-webkit-slider-thumb:hover {
+		box-shadow: 0 0 0 10px rgba($color: #ffffff, $alpha: 0.1);
+		cursor: pointer;
+	}
+	&:active::-webkit-slider-thumb {
+		box-shadow: 0 0 0 13px rgba($color: #ffffff, $alpha: 0.1);
+		cursor: pointer;
+	}
+	&:focus::-webkit-slider-thumb {
+		box-shadow: 0 0 0 13px rgba($color: #ffffff, $alpha: 0.1);
+		cursor: pointer;
+	}
+	&::-moz-range-thumb:hover {
+		box-shadow: 0 0 0 13px rgba($color: #ffffff, $alpha: 0.1);
+		cursor: pointer;
+	}
+	&:active::-moz-range-thumb {
+		box-shadow: 0 0 0 13px rgba($color: #ffffff, $alpha: 0.1);
+		cursor: pointer;
+	}
+	&:focus::-moz-range-thumb {
+		box-shadow: 0 0 0 13px rgba($color: #ffffff, $alpha: 0.1);
+		cursor: pointer;
+	}
+}
+
+.range {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	row-gap: clamp(rem(9),vw(14),rem(14));
+	column-gap: rem(20);
+	input {
+		flex: 1 1 100%;
+		-webkit-appearance: none;
+		appearance: none;
+		width: 100%;
+		cursor: pointer;
+		outline: none;
+		border-radius: rem(0);
+		height: rem(3);
+	}
+}
+//</Input >====================================================================================================

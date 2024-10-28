@@ -1,0 +1,447 @@
+@use "sass:math";
+
+@import "inc/mixins";
+.acf-switch-slider {
+   background: #70c466 !important;
+}
+.acf-field-65f03e10b4165 {
+   pointer-events: none;
+}
+.acf-fc-popup {
+   li {
+      a {
+         position: relative;
+         &::after {
+            content: "";
+            position: absolute;
+            z-index: 10;
+            right: calc(100% + rem(8));
+            top: 0;
+            bottom: 0;
+            width: rem(550);
+            height: rem(300);
+            border-radius: rem(24);
+
+            background-color: #fff;
+            box-shadow: 0 0 rem(9) rem(4) rgba($color: #000000, $alpha: 0.5);
+
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+         }
+         @media (any-hover: hover) {
+            &:hover {
+               &::after {
+                  opacity: 1;
+                  visibility: visible;
+                  pointer-events: all;
+               }
+            }
+         }
+         &:focus-visible {
+            &::after {
+               opacity: 1;
+               visibility: visible;
+               pointer-events: all;
+            }
+         }
+      }
+
+      a[data-layout="hero_type_1"] {
+         &::after {
+            background-image: url("../img/acf/hero_type_1.png");
+         }
+      }
+      a[data-layout="content_accordion"] {
+         &::after {
+            background-image: url("../img/acf/content_accordion.jpg");
+         }
+      }
+      a[data-layout="background_content_type-1"] {
+         &::after {
+            background-image: url("../img/acf/background_content_type-1.png");
+         }
+      }
+      a[data-layout="content_slider"] {
+         &::after {
+            background-image: url("../img/acf/content_slider.png");
+         }
+      }
+      a[data-layout="decorated_content_columns_type_1"] {
+         &::after {
+            background-image: url("../img/acf/decorated_content_columns_type_1.png");
+         }
+      }
+      a[data-layout="decorated_content_columns_type_2"] {
+         &::after {
+            background-image: url("../img/acf/decorated_content_columns_type_2.jpg");
+         }
+      }
+      a[data-layout="content_list"] {
+         &::after {
+            background-image: url("../img/acf/content_list.png");
+         }
+      }
+      a[data-layout="background_content_type-2"] {
+         &::after {
+            background-image: url("../img/acf/background_content_type-2.jpg");
+         }
+      }
+      a[data-layout="single_slider"] {
+         &::after {
+            background-image: url("../img/acf/single_slider.png");
+         }
+      }
+      a[data-layout="media_content"] {
+         &::after {
+            background-image: url("../img/acf/media-content.jpg");
+         }
+      }
+      a[data-layout="content_steps"] {
+         &::after {
+            background-image: url("../img/acf/content_steps.png");
+         }
+      }
+      a[data-layout="text_columns_type-1"] {
+         &::after {
+            background-image: url("../img/acf/text_columns_type-1.png");
+         }
+      }
+      a[data-layout="multislider"] {
+         &::after {
+            background-image: url("../img/acf/multislider.jpg");
+         }
+      }
+      a[data-layout="cards_row"] {
+         &::after {
+            background-image: url("../img/acf/cards_row.jpg");
+         }
+      }
+      a[data-layout="cards_steps"] {
+         &::after {
+            background-image: url("../img/acf/cards_steps.jpg");
+         }
+      }
+      a[data-layout="links_list"] {
+         &::after {
+            background-image: url("../img/acf/links_list.jpg");
+         }
+      }
+      a[data-layout="hero_type_2"] {
+         &::after {
+            background-image: url("../img/acf/hero_type_2.jpg");
+         }
+      }
+      a[data-layout="content_accordion_type_2"] {
+         &::after {
+            background-image: url("../img/acf/content_accordion_type_2.jpg");
+         }
+      }
+      a[data-layout="content_cards"] {
+         &::after {
+            background-image: url("../img/acf/content_cards.jpg");
+         }
+      }
+      a[data-layout="image_content"] {
+         &::after {
+            background-image: url("../img/acf/image_content.jpg");
+         }
+      }
+      a[data-layout="hero_type_3"] {
+         &::after {
+            background-image: url("../img/acf/hero_type_3.jpg");
+         }
+      }
+      a[data-layout="content_steps_type_2"] {
+         &::after {
+            background-image: url("../img/acf/content_steps_type_2.jpg");
+         }
+      }
+      a[data-layout="content_steps_sticky_image"] {
+         &::after {
+            background-image: url("../img/acf/content_steps_sticky.jpg");
+         }
+      }
+      a[data-layout="mortgage_calculator"] {
+         &::after {
+            background-image: url("../img/acf/mortgage_calculator.jpg");
+         }
+      }
+      a[data-layout="faq_block"] {
+         &::after {
+            background-image: url("../img/acf/faq.jpg");
+         }
+      }
+      a[data-layout="content_cards_icon"] {
+         &::after {
+            background-image: url("../img/acf/content_cards_icon.jpg");
+         }
+      }
+      a[data-layout="text_columns_type-2"] {
+         &::after {
+            background-image: url("../img/acf/text_columns_type-2.jpg");
+         }
+      }
+      a[data-layout="slider_packages"] {
+         &::after {
+            background-image: url("../img/acf/slider_packages.jpg");
+         }
+      }
+      a[data-layout="hero_type_4"] {
+         &::after {
+            background-image: url("../img/acf/hero_type_4.jpg");
+         }
+      }
+      a[data-layout="content_row_sticky"] {
+         &::after {
+            background-image: url("../img/acf/content_row_sticky.jpg");
+         }
+      }
+      a[data-layout="side_slider"] {
+         &::after {
+            background-image: url("../img/acf/side_slider.jpg");
+         }
+      }
+      a[data-layout="contact_info_form"] {
+         &::after {
+            background-image: url("../img/acf/contact_info_form.jpg");
+         }
+      }
+      //mortgage_calculator
+   }
+}
+#acf-group_65e8e12bc6f64 {
+   .acf-tab-wrap.-left .acf-tab-group {
+      li {
+         a {
+            position: relative;
+            &::after {
+               content: "";
+               position: absolute;
+               z-index: 10;
+               left: calc(100% + rem(8));
+               top: 0;
+               bottom: 0;
+               width: rem(550);
+               height: rem(300);
+               border-radius: rem(24);
+
+               background-color: #fff;
+               box-shadow: 0 0 rem(9) rem(4) rgba($color: #000000, $alpha: 0.5);
+
+               background-repeat: no-repeat;
+               background-size: cover;
+               background-position: center;
+
+               opacity: 0;
+               visibility: hidden;
+               pointer-events: none;
+            }
+            @media (any-hover: hover) {
+               &:hover {
+                  &::after {
+                     opacity: 1;
+                     visibility: visible;
+                     pointer-events: all;
+                  }
+               }
+            }
+            &:focus-visible {
+               &::after {
+                  opacity: 1;
+                  visibility: visible;
+                  pointer-events: all;
+               }
+            }
+         }
+         // Header,Footer
+         a[data-key="field_65e8e12cd253a"],
+         a[data-key="field_65ecd86bb25a5"] {
+            &::after {
+               display: none;
+            }
+         }
+
+         a[data-key="field_65ee1daa56914"] {
+            &::after {
+               background-image: url("../img/acf/hero_type_1.png");
+            }
+         }
+         a[data-key="field_65ee1fc94e888"] {
+            &::after {
+               background-image: url("../img/acf/content_accordion.jpg");
+            }
+         }
+         a[data-key="field_65e99656a83a3"] {
+            &::after {
+               background-image: url("../img/acf/content_accordion.png");
+            }
+         }
+         a[data-key="field_65eacfcc763f7"] {
+            &::after {
+               background-image: url("../img/acf/background_content_type-1.png");
+            }
+         }
+         a[data-key="field_65e9b13e62f4d"] {
+            &::after {
+               background-image: url("../img/acf/content_slider.png");
+            }
+         }
+         a[data-key="field_65eabc70c5e5f"] {
+            &::after {
+               background-image: url("../img/acf/decorated_content_columns_type_1.png");
+            }
+         }
+         a[data-key="field_65eaca8d239c4"] {
+            &::after {
+               background-image: url("../img/acf/content_list.png");
+            }
+         }
+         a[data-layout="background_content_type-2"] {
+            &::after {
+               background-image: url("../img/acf/background_content_type-2.jpg");
+            }
+         }
+         a[data-key="field_65eaf4d712cb8"] {
+            &::after {
+               background-image: url("../img/acf/single_slider.png");
+            }
+         }
+         a[data-key="field_65eb0906dd451"] {
+            &::after {
+               background-image: url("../img/acf/media-content.jpg");
+            }
+         }
+         a[data-key="field_65eb0f7abe640"] {
+            &::after {
+               background-image: url("../img/acf/content_steps.png");
+            }
+         }
+         a[data-key="field_65eb207dd155e"] {
+            &::after {
+               background-image: url("../img/acf/text_columns_type-1.png");
+            }
+         }
+         a[data-key="field_65ecd5afad355"] {
+            &::after {
+               background-image: url("../img/acf/multislider.jpg");
+            }
+         }
+         a[data-key="field_65ecd5afad355"] {
+            &::after {
+               background-image: url("../img/acf/multislider.jpg");
+            }
+         }
+         a[data-key="field_65ecfa8c9bdef"] {
+            &::after {
+               background-image: url("../img/acf/cards_row.jpg");
+            }
+         }
+         a[data-key="field_65ee3f7466601"] {
+            &::after {
+               background-image: url("../img/acf/cards_steps.jpg");
+            }
+         }
+         a[data-key="field_65ee4759f69ea"] {
+            &::after {
+               background-image: url("../img/acf/links_list.jpg");
+            }
+         }
+         a[data-key="field_65ef6f3e67535"] {
+            &::after {
+               background-image: url("../img/acf/decorated_content_columns_type_2.jpg");
+            }
+         }
+         a[data-key="field_65f04fae768ed"] {
+            &::after {
+               background-image: url("../img/acf/404.jpg");
+            }
+         }
+         a[data-key="field_65f209918143c"] {
+            &::after {
+               background-image: url("../img/acf/hero_type_2.jpg");
+            }
+         }
+         a[data-key="field_65f2fec5de86e"] {
+            &::after {
+               background-image: url("../img/acf/content_accordion_type_2.jpg");
+            }
+         }
+         a[data-key="field_65f309ae9a46d"] {
+            &::after {
+               background-image: url("../img/acf/content_cards.jpg");
+            }
+         }
+         a[data-key="field_65f321206ae03"] {
+            &::after {
+               background-image: url("../img/acf/image_content.jpg");
+            }
+         }
+         a[data-key="field_65f3255fde4c6"] {
+            &::after {
+               background-image: url("../img/acf/hero_type_3.jpg");
+            }
+         }
+         a[data-key="field_65f365feb5d23"] {
+            &::after {
+               background-image: url("../img/acf/content_steps_type_2.jpg");
+            }
+         }
+         a[data-key="field_65f3989a4c8dd"] {
+            &::after {
+               background-image: url("../img/acf/content_steps_sticky.jpg");
+            }
+         }
+         a[data-key="field_65f3a5bdf11ee"] {
+            &::after {
+               background-image: url("../img/acf/mortgage_calculator.jpg");
+            }
+         }
+         a[data-key="field_65f3abb64ee5a"] {
+            &::after {
+               background-image: url("../img/acf/faq.jpg");
+            }
+         }
+         a[data-key="field_65f8a3613ac40"] {
+            &::after {
+               background-image: url("../img/acf/content_cards_icon.jpg");
+            }
+         }
+         a[data-key="field_65f8afa7f9fb9"] {
+            &::after {
+               background-image: url("../img/acf/text_columns_type-2.jpg");
+            }
+         }
+         a[data-key="field_65f8d26da4586"] {
+            &::after {
+               background-image: url("../img/acf/slider_packages.jpg");
+            }
+         }
+         a[data-key="field_65f8da1ffa034"] {
+            &::after {
+               background-image: url("../img/acf/hero_type_4.jpg");
+            }
+         }
+         a[data-key="field_65f8e37264d8f"] {
+            &::after {
+               background-image: url("../img/acf/content_row_sticky.jpg");
+            }
+         }
+         a[data-key="field_65f97f406a4e3"] {
+            &::after {
+               background-image: url("../img/acf/side_slider.jpg");
+            }
+         }
+         a[data-key="field_65f999ec20dbf"] {
+            &::after {
+               background-image: url("../img/acf/contact_info_form.jpg");
+            }
+         }
+         //data-key="field_65f999ec20dbf"
+      }
+   }
+}

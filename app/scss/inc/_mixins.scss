@@ -1,0 +1,103 @@
+// <Font-family>===============================================================================================
+$font_primary: "DM Sans", sans-serif;
+$font_secondary: "Mukta", sans-serif;
+
+$lineHeight: 1.6;
+$fontweight: 400;
+// </Font-family>===============================================================================================
+
+// <Colors>=====================================================================================================
+$white: #ffffff;
+// </Colors>====================================================================================================
+
+// <Properties>=================================================================================================
+$text_shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+// </Properties>================================================================================================
+
+// <Properties-mixins>==========================================================================================
+
+//convert px to em
+@function em($value, $const: 16) {
+	$emValue: calc($value / $const) + em;
+	@return $emValue;
+}
+
+//mixins properties
+$maxWidth: 1920;
+$mobWidth: 390;
+$rootFontSize: 16;
+
+$pc: em($maxWidth);
+$tablet: em(1023.98);
+$tabletMedium: em(991.98);
+$tabletSmall: em(767.98);
+$mobile: em(479.98);
+// </Properties-mixins>==========================================================================================
+
+// <Icons>=======================================================================================================
+%icons {
+	font-family: "icons" !important;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon__"],
+[class*=" icon__"] {
+	&:before {
+		@extend %icons;
+		display: block;
+	}
+}
+// </Icons>========================================================================================================
+
+// <Mixins-general>=========================================================================================================
+
+@function rem($value) {
+	$remValue: math.div($value, $rootFontSize) + rem;
+	@return $remValue;
+}
+
+//convert px to vw
+@function vw($value) {
+	$vwValue: (math.div($value, $maxWidth) * 100) + vw;
+	@return $vwValue;
+}
+
+@function vw-m($value) {
+	$vwValue: (math.div($value, $mobWidth) * 100) + vw;
+	@return $vwValue;
+}
+//custom scrollbar styes
+@mixin custom-scrollbar {
+	scrollbar-width: thin;
+	scrollbar-color: $primaryColor $secondaryColor;
+	&::-webkit-scrollbar {
+		width: 3px;
+	}
+	&::-webkit-scrollbar-track {
+		background: $primaryColor;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: $secondaryColor;
+	}
+	&::-webkit-scrollbar-thumb:hover {
+		background: darken($secondaryColor, 20%);
+	}
+}
+
+@mixin rtl() {
+	html[dir="rtl"] & {
+		@content;
+	}
+}
+
+@mixin ltr() {
+	html[dir="ltr"] & {
+		@content;
+	}
+}
