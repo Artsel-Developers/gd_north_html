@@ -10,14 +10,14 @@ html {
 		font-size: vw(16);
 	}
 
-	@media screen and (max-width: 1024px) {
-		// font-size: vwm(16);
+	@media screen and (max-width: 390px) {
+		font-size: vw-m(16);
 	}
 }
 
 html,
 body {
-	height: 100%;
+	// height: 100%;
 }
 
 body {
@@ -42,8 +42,8 @@ main {
 }
 .container {
 	width: 100%;
-	padding-inline-start: clamp(rem(20), vw(100), rem(100));
-	padding-inline-end: clamp(rem(20), vw(100), rem(100));
+	padding-inline-start: clamp(rem(20), vw(55), rem(55));
+	padding-inline-end: clamp(rem(20), vw(55), rem(55));
 	margin: 0 auto;
 	z-index: 5;
 	@media (max-width: em(1300)) {
@@ -54,15 +54,26 @@ main {
 		padding-inline-start: rem(20);
 		padding-inline-end: rem(20);
 	}
+	@media (max-width: $tabletSmall) {
+		padding-inline-start: rem(7);
+		padding-inline-end: rem(7);
+	}
 }
 
 main {
 	& > :first-child {
-		padding-top: rem(133);
+		// padding-top: rem(133);
 
 		@media (max-width: $tablet) {
-			padding-top: rem(68);
+			// padding-top: rem(68);
 		}
+	}
+}
+i {
+	&::before {
+		font-size: inherit;
+		color: inherit;
+		font-weight: inherit;
 	}
 }
 

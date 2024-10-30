@@ -1,44 +1,83 @@
-// //<Checkbox >====================================================================================================
-// label {
-// 	cursor: pointer;
-// 	height: rem(32);
-// 	display: block;
-// 	span {
-// 		display: flex;
-// 		align-items: center;
-// 		justify-content: center;
-// 		// width: rem(64);
-// 		height: 100%;
-// 		border-radius: rem(50);
+.site-form__item--checkbox {
+   @media (max-width: $tablet) {
+      margin-top: rem(20);
+   }
+   label {
+      position: static !important;
 
-// 		font-size: rem(18);
-// 		line-height: 1.6;
-// 		color: $dark_green;
-// 	}
+      pointer-events: all !important;
+      overflow: hidden;
+      cursor: pointer;
 
-// 	input[type="radio"] {
-// 		cursor: pointer;
-// 		appearance: none;
-// 		-webkit-appearance: none;
-// 		-moz-appearance: none;
-// 		position: absolute;
-// 		&:checked {
-// 			+ span {
-// 				background-color: $light_green_2;
-// 				@media(max-width:$tablet){
-// 					font-weight: 600;
-// 				}
-// 			}
-// 		}
+      &:has(:not(:checked)) {
+         .wpcf7-list-item-label {
+            &::after {
+               opacity: 0;
+               transform: translateY(-50%) scale(0);
+            }
+         }
+      }
+      &:has(:checked) {
+         .wpcf7-list-item-label {
+            &::after {
+               opacity: 1;
+               transform: translateY(-50%) scale(1);
+            }
+         }
+      }
 
-// 		@media (any-hover: hover) {
-// 			&:hover {
-// 				+ span {
-// 					background-color: $light_green_2;
-// 				}
-// 			}
-// 		}
-// 	}
-// }
+      input {
+         position: absolute;
+         inset-inline-start: -9999px;
+      }
+      .wpcf7-list-item-label {
+         position: relative;
+         display: block;
+         padding-inline-start: rem(59);
 
-// //</Checkbox >====================================================================================================
+         font-family: $font_primary;
+
+         font-weight: 400;
+         font-size: clamp(rem(8), vw(13), rem(13)) !important;
+         line-height: 1.28;
+         text-align: justify;
+
+         text-align: justify;
+         text-transform: uppercase;
+
+         color: $blue;
+
+         a {
+            text-decoration: underline;
+            @media (any-hover: hover) {
+               &:hover {
+                  text-decoration: none;
+               }
+            }
+         }
+         &::before,
+         &::after {
+            content: "";
+            position: absolute;
+            inset-inline-start: 0;
+            top: 50%;
+         }
+         &::before {
+            transform: translateY(-50%);
+            width: rem(32);
+            height: rem(32);
+            border: rem(1) solid $blue;
+         }
+         &::after {
+            background-color: $blue;
+            width: rem(28);
+            height: rem(28);
+            inset-inline-start: rem(2);
+            transition: all 0.3s ease 0s;
+         }
+      }
+   }
+   @media (max-width: $tablet) {
+      order: 1;
+   }
+}

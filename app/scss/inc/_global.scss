@@ -3,8 +3,8 @@ body {
 	line-height: $lineHeight;
 	font-family: $font_primary;
 	font-size: 1em;
-	// color: $black;
-	// background-color: $white_bg;
+	color: $black;
+	background-color: $white;
 
 	&.fixed {
 		overflow: hidden;
@@ -26,10 +26,7 @@ body {
 	-webkit-tap-highlight-color: #9c9c9c;
 }
 
-::selection {
-	// background-color: $white_bg;
-	// color: $black;
-}
+
 
 .preloader {
 	position: fixed;

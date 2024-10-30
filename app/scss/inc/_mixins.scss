@@ -1,6 +1,7 @@
 // <Font-family>===============================================================================================
-$font_primary: "DM Sans", sans-serif;
-$font_secondary: "Mukta", sans-serif;
+$font_primary: "Ploni", sans-serif;
+$font_secondary: "Narikss", sans-serif;
+$font_third: "Floreal", sans-serif;
 
 $lineHeight: 1.6;
 $fontweight: 400;
@@ -8,7 +9,13 @@ $fontweight: 400;
 
 // <Colors>=====================================================================================================
 $white: #ffffff;
-// </Colors>====================================================================================================
+$black: #1c110a;
+$blue: #0061aa;
+$light_blue: #6d9fc6e6;
+$red: #e93e00e6;
+$green: #2cbd00e6;
+
+// </Colors>=rgb(101, 183, 245)============================================================================================
 
 // <Properties>=================================================================================================
 $text_shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -53,6 +60,29 @@ $mobile: em(479.98);
 		display: block;
 	}
 }
+
+.icon__arrow-top:before {
+	content: "\e900";
+}
+.icon__download:before {
+	content: "\e901";
+}
+.icon__facebook:before {
+	content: "\e902";
+}
+.icon__instagram:before {
+	content: "\e903";
+}
+.icon__logo:before {
+	content: "\e904";
+}
+.icon__phone:before {
+	content: "\e905";
+}
+.icon__pluse:before {
+	content: "\e906";
+}
+
 // </Icons>========================================================================================================
 
 // <Mixins-general>=========================================================================================================

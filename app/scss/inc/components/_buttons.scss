@@ -7,11 +7,9 @@
 	font-family: $font_primary;
 	text-align: center;
 	font-size: clamp(rem(16), vw(18), rem(18));
-	font-weight: 500;
+	font-weight: 400;
 	line-height: math.div(23, 18);
 	// color: $white;
-
-	border-radius: rem(100);
 
 	transition: all 0.3s ease 0s;
 
@@ -23,6 +21,143 @@
 		cursor: not-allowed;
 	}
 }
+.btn--modal {
+	border-radius: 50%;
+	background-color: $blue;
+	width: clamp(rem(32), vw(49), rem(49));
+	height: clamp(rem(32), vw(49), rem(49));
 
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: $white;
+			box-shadow: 0 0 rem(1) rem(1) $blue;
+			i {
+				color: $blue;
+			}
+		}
+	}
+	i {
+		color: $white;
+		font-size: rem(28);
+	}
+}
+.btn-burger {
+	display: inline-block;
+	position: relative;
+	z-index: 102;
+	width: rem(31);
+	height: rem(21);
+
+	@media (min-width: em(1300)) {
+		display: none;
+	}
+	span {
+		display: inline-block;
+		position: absolute;
+		right: 0;
+		width: 100%;
+		height: rem(2);
+		border-radius: rem(6);
+		transition: 0.3s ease-in-out;
+		background-color: $white;
+
+		&:nth-of-type(1) {
+			top: 0;
+		}
+
+		&:nth-of-type(2) {
+			top: 50%;
+		}
+
+		&:nth-of-type(3) {
+			top: calc(100% - rem(2));
+		}
+	}
+
+	&.menuIsActive {
+		span {
+			width: 100% !important;
+
+			&:nth-of-type(1) {
+				transform: rotate(45deg);
+				top: rem(10);
+			}
+
+			&:nth-of-type(2) {
+				transform: translateX(-100%);
+				opacity: 0;
+			}
+
+			&:nth-of-type(3) {
+				top: rem(10);
+				transform: rotate(-45deg);
+			}
+		}
+	}
+}
+.slider-actions {
+	display: flex;
+	justify-content: center;
+	.swiper-pagination {
+		position: static;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: rem(4);
+	}
+	.swiper-pagination-bullet {
+		width: rem(8);
+		height: rem(8);
+		background-color: #d0d0d0;
+		opacity: 1;
+	}
+	.swiper-pagination-bullet-active {
+		background-color: $blue;
+	}
+	.swiper-button-disabled {
+		// pointer-events: all !important;
+		cursor: not-allowed;
+		opacity: 0.6 !important; 
+	}
+	.swiper-button-next,
+	.swiper-button-prev {
+		background-color: $white;
+		height: clamp(rem(42), vw(103), rem(103));
+		width: clamp(rem(19), vw(48), rem(48));
+		opacity: 1;
+
+		i {
+			font-size: clamp(rem(10), vw(18), rem(18));
+			color: $blue;
+		}
+		&::after {
+			display: none;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $blue;
+
+				i {
+					color: $white;
+				}
+			}
+		}
+	}
+	.swiper-button-next {
+		inset-inline-end: 0;
+
+		i {
+			transform: rotate(-90deg);
+		}
+	}
+	.swiper-button-prev {
+		inset-inline-start: 0;
+
+		i {
+			transform: rotate(90deg);
+		}
+	}
+}
 
 // </buttons>===============================================================================================
